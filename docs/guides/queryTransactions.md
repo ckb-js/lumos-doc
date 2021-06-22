@@ -330,7 +330,7 @@ Get transactions and skip the first 2 trasactions
 
 ### Order Transactions by Block Number
 
-The following example creates a new [TransactionCollector](https://nervosnetwork.github.io/lumos/classes/indexer.transactioncollector.html) and uses the TransactionCollector to collect transactions in order of block numbers for a specific lock script. If the order is not specified, the default order is "asc" (ascending) for the returned result.
+The following example creates a new [TransactionCollector](https://nervosnetwork.github.io/lumos/classes/indexer.transactioncollector.html) and uses the TransactionCollector to collect transactions in the order of the block numbers. If the order is not specified, the default order is "asc" (ascending) for the returned result.
 
 Example:
 
@@ -378,11 +378,9 @@ export async function findTXsbyPrefix(lock: Script, argsLen: number) {
 
 ### Fine-grained Query for Transactions
 
-<!--Fine-grained query for transactions can be achieved by using [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html) that combines <var>ioType</var>, <var>argsLen</var> with <var>script</var> (a lock script or a type script).--><!--The <var>ioType</var> option means the cell type that can be `input`, `output` or `both`.--><!--<var>argsLen</var> is the length of the script args in the ScriptWrapper. If <var>argsLen</var> is not specified, the <var>argsLen</var> config outside of the ScriptWrapper or the default value -1 will be used.-->
-
 Fine-grained query can query on transactions at the granularity of a cell type, a lock or type script, and the args length of the lock or type script by using [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html).
 
-The query gets the transactions containing the cells in <var>ioType</var> ( `input` or `output` or `both`) and with a specific lock or type script, and the args length of the script is <var>argsLen</var>. The <var>argsLen</var> config in the ScriptWrapper takes priority over the <var>argsLen</var> config outside of the ScriptWrapper. If <var>argsLen</var> is not specified in the ScriptWrapper, the <var>argsLen</var> config outside of the ScriptWrapper or the default value -1 will be used.
+The query acquires the transactions containing the cells in <var>ioType</var> ( `input` or `output` or `both`) and with a specific lock or type script, and the args length of the script is <var>argsLen</var>. The <var>argsLen</var> config in the ScriptWrapper takes priority over the <var>argsLen</var> config outside of the ScriptWrapper. If <var>argsLen</var> is not specified in the ScriptWrapper, the <var>argsLen</var> config outside of the ScriptWrapper or the default value -1 will be used.
 
 The following example is the fine-grained query for transactions on a ScriptWrapper that wraps a lock script, a lock args length and a cell type.
 

@@ -2,6 +2,14 @@
   "name": "lumos-doc",
   "version": "0.0.0",
   "private": true,
+    "workspaces": {
+    "packages": [
+      "docs"
+    ],
+    "nohoist": [
+      "**/html-minifier-terser"
+    ]
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

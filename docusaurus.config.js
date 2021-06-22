@@ -1,13 +1,13 @@
 module.exports = {
   title: 'A TypeScript and JavaScript Framework for CKB DApps',
   tagline: 'The Development Framework for Nervos CKB DApps',
-  url: 'https://github.com/xying21/lumos_doc',
-  baseUrl: '/lumos_doc/',
+  url: 'https://cryptape.github.io/lumos-doc/',
+  baseUrl: '/lumos-doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
-  organizationName: 'xying21', // Usually your GitHub org/user name.
-  projectName: 'lumos_doc', // Usually your repo name.
+  organizationName: 'cryptape', // Usually your GitHub org/user name.
+  projectName: 'lumos-doc', // Usually your repo name.
 
   plugins: ['docusaurus-plugin-sass' ],
   
@@ -108,11 +108,6 @@ module.exports = {
             },
       copyright: `Copyright © ${new Date().getFullYear()} Nervos Foundation. All Rights Reserved.`,
     },
-/*        footer: {
-      links: [],
-      logo: {},
-      copyright: `Copyright © ${new Date().getFullYear()} Nervos`,
-    }, */
   },
   presets: [
     [
@@ -123,15 +118,10 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/xying21/lumos_doc/tree/master',
+            'https://github.com/cryptape/lumos-doc/tree/master',
 		  showLastUpdateTime: true,
         },
-        /*blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        },*/
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },

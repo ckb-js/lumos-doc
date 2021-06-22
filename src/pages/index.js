@@ -61,12 +61,10 @@ function Body() {
     </main>
   );
 }
-/*<script id="TelegramLiveChatLoader" data-bot="7CD95938-9E7D-11EB-A677-82FA22E822B5" src="https://livechatbot.net/assets/chat/js/loader.js"></script>*/
-/*<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="bfc3eca2-568b-4181-9dda-8de6166b8a48";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>*/
 export default function Home() {
   return (
     <Layout>
-	<Head>/*<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/85e4a005c7a14117b205fec853cbe30447112d747a6747e5a40a804d4bcf715a.js"></script>*/
+	<Head>
 </Head>
       <Hero />
       <Body />
