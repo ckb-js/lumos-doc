@@ -238,7 +238,7 @@ value = 1000
 
 ## Install a CKB Node by Using the Pre-built Installer Package
 
-### Step 1. Download the CKB Pre-built Installer Package.
+### Step 1. Download the CKB pre-built installer package.
 
 <Tabs
   defaultValue="ubuntu"

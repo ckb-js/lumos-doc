@@ -139,7 +139,7 @@ Run the following command to migrate and update the local database:
 npx knex migrate:up
 ```
 
-### Step 5. Start the Indexer.
+### Step 5. Start the indexer.
 
 The Indexer URI is the <var>listen_address</var> configuration in the `ckb.toml` file of the CKB node. The default indexer URI is http://127.0.0.1:8114.
 

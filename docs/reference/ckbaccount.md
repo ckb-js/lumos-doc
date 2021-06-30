@@ -229,7 +229,7 @@ Password:
 message: "Success exported account as extended privkey to: \"alice\", please use this file carefully"
 ```
 
-### Step 5. Get CKB Capacity for the account of Alice.
+### Step 5. Get CKB capacity for the account of Alice.
 
 The process of getting CKB capacity varies for the accounts on different networks (chains). 
 
@@ -267,7 +267,7 @@ The process of getting CKB capacity varies for the accounts on different network
 
   50,000 CKB can be claimed for each Testnet address from the [faucet](https://faucet.nervos.org/) per 24 hours. 
 
-### Step 6. Check the Balance for the Account of Alice.
+### Step 6. Check the balance for the account of Alice.
 
 To check the balance of an account on DEV chain or Testnet, execute the `ckb-cli wallet get-capacity --address <the Testnet address of the account>` command.
 
