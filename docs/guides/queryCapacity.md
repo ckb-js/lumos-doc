@@ -3,14 +3,16 @@ id: querycapacity
 title: Query on CKB Capacity
 ---
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
+import Link from "@docusaurus/Link";
 
 ## Prerequisites
 
 The following prerequisites apply for the examples of this guide:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](http://localhost:3000/lumos_doc/docs/preparation/setupsystem).
-- The Lumos packages are installed. For more information, see [Install Lumos Packages](../guides/installlumos).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- The Lumos packages are installed. For more information, see <Link to={useBaseUrl('/docs/guides/installlumos')}>Install Lumos Packages</Link>.
 
 ## Environment
 
@@ -101,7 +103,7 @@ The minimal cell capacity is 10200000000n
 
 ### Get the Balance of an Account
 
-The balance of an account means the total CKB capacity of the account. For more information, see [CKB Capacity of an Account](../reference/ckbaccount#ckb-capacity-of-an-account).
+The balance of an account means the total CKB capacity of the account. For more information, see <Link to={useBaseUrl('/docs/reference/ckbaccount#ckb-capacity-of-an-account')}>CKB Capacity of an Account</Link>.
 
 The following example gathers the live (unspent) cells for a specific lock script (the lock script is the ID of an account) and then calculates the total capacity as the balance of the account. 
 
@@ -171,7 +173,7 @@ export async function getSUDTBalance(lock: Script, sudtType: Script) {
 }
 ```
 
-For more information about SUDT and SUDT operations, see [Issue SUDT Tokens](../guides/buildtransactions#issue-sudt-tokens) and [Transfer SUDT Tokens](../guides/buildtransactions#transfer-sudt-tokens).
+For more information about SUDT and SUDT operations, see <Link to={useBaseUrl('/docs/guides/buildtransactions#issue-sudt-tokens')}>Issue SUDT Tokens</Link> and <Link to={useBaseUrl('/docs/guides/buildtransactions#transfer-sudt-tokens')}>Transfer SUDT Tokens</Link>.
 
 ### Find Cells for Sufficient Capacity
 

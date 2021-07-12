@@ -5,6 +5,8 @@ sidebar_label: Lumos Overview
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+import Link from "@docusaurus/Link";
+
 Lumos is an open-source framework that was developed by the Nervos Developer Tools team, for building Nervos CKB DApps. <!--The framework is developed by using JavaScript and TypeScript in NodeJs environment.-->
 
 > Lumos enables to free the DApp developers from most of the hassles for dealing with CKB. So the developers can focus on the specific logic in the DApps.
@@ -15,7 +17,7 @@ Based on [the CKB programming model](https://github.com/nervosnetwork/rfcs/blob/
 
 Applications that run in the Node.js environment and that serve as the ***off-chain computation*** part can be developed on top of Lumos. The DApp built upon Lumos polls the block information from the CKB network, indexes cells locally, and provides the cells for queries and transactions corresponding to user requests.
 
-For more information, see [Lumos Components](../introduction/lumoscomponents).
+For more information, see <Link to={useBaseUrl('/docs/introduction/lumoscomponents')}>Lumos Components</Link>.
 
 <img src={useBaseUrl("img/how.svg")}  width="70%"/>
 

@@ -2,11 +2,13 @@
 id: buildtransactions
 title: Build Transactions
 ---
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 The objective and the core functionality of a DApp built on top of Lumos is to build transactions in response to user requests. Lumos provides the [TransactionSkeleton](https://nervosnetwork.github.io/lumos/modules/helpers.html#transactionskeletontype) that significantly simplifies the transaction assembling process. Each transaction skeleton corresponds to an action, and will be built into a single transaction that is ready to be submitted to CKB.
 
 This guide introduces the general workflow of assembling transactions. The workflow applies to the following examples of a common transfer operation, DAO operations, a transfer operation with the `locktimepool`, and SUDT operations.
-
-<!--[TransactionSkeleton](https://github.com/nervosnetwork/lumos/blob/develop/packages/helpers/src/index.ts#L212) supports transaction assembling with the following conveniences:--><!--A well designed component must be able to query and include cells automatically to provide capacities required by the transaction.--><!--Individual script logic must be managed and respected by the general transaction skeleton.--><!--Scripts sharing the same behavior must be managed together in a unified interface. Developers can rely on abstractions instead of catering for every single detail.-->
 
 ## General Workflow
 
@@ -22,7 +24,7 @@ The DApp can assemble a transaction in the following steps:
 
    :::note
 
-   From the security perspective of a DApp, Lumos does not support built-in message signing. So the DApp needs to send the raw transaction <!--or the signing entries piece of the skeleton which contains the actual data to sign--> to the user wallet to acquire signatures. The raw transaction contains all the cells and dependencies for the action and the data that needs to be signed.<!--When the client gets the skeleton, the client forwards the transaction skeleton to the wallet for signing.--> 
+   From the security perspective of a DApp, Lumos does not support built-in message signing. So the DApp needs to send the raw transaction to the user wallet to acquire signatures. The raw transaction contains all the cells and dependencies for the action and the data that needs to be signed.
 
    :::
 
@@ -36,8 +38,8 @@ The DApp can assemble a transaction in the following steps:
 
 The following prerequisites apply for the examples in this guide:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](http://localhost:3000/lumos_doc/docs/preparation/setupsystem).
-- The Lumos packages are installed. For more information, see [Install Lumos Packages](../guides/installlumos).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- The Lumos packages are installed. For more information, see <Link to={useBaseUrl('/docs/guides/installlumos')}>Install Lumos Packages</Link>.
 
 ## Environment
 
@@ -689,8 +691,6 @@ The epoch information is located in the block header. For the CKB node installed
 
 The following figure shows the epoch number and the block index of the deposit transaction (0x3162e8ccef8844e83c6cc63122f332f89d7dbd65c7d5f9fa040f4dd532b7abee). The withdrawn cell can be unlocked after epoch (180 + 1 + 9 / 10).
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
-
 <img src={useBaseUrl("img/block.png")}/>
 
 Try the `unlockWithdraw` function in the Node.js REPL mode.
@@ -963,7 +963,7 @@ The transaction hash is 0x60db4b0dc2e21632a035c021ad05a56e80fd2d50aeb3d9e00aa554
 
 :::note
 
-The SUDT script needs to be deployed to DEV chain before operating on SUDT tokens. For more information about deploying the SUDT script, see [Write a SUDT script by Capsule](https://docs.nervos.org/docs/labs/sudtbycapsule). You can also refer to the [Deploy the NFT Script on DEV Chain](../guides/integratenft#deploy-the-nft-script-on-dev-chain) example for details about deploying a script on DEV chain.
+The SUDT script needs to be deployed to DEV chain before operating on SUDT tokens. For more information about deploying the SUDT script, see [Write a SUDT script by Capsule](https://docs.nervos.org/docs/labs/sudtbycapsule). You can also refer to the <Link to={useBaseUrl('/docs/guides/integratenft#deploy-the-nft-script-on-dev-chain')}>Deploy the NFT Script on DEV Chain</Link> example for details about deploying a script on DEV chain.
 
 :::
 

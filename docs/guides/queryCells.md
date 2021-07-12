@@ -5,6 +5,10 @@ title: Query on Cells
 
 > Cells are the primary state units in CKB and are assets owned by users. A cell is the most basic structure that represents a single piece of data in Nervos. The data contained in a cell can take many forms, including CKBytes, tokens, code like JavaScript code, or even serialized data like JSON strings. For more information about the cell model, see [Nervos Docs: Cell](https://docs.nervos.org/docs/reference/cell) and [CKB RFC: CKB Cell](https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0002-ckb/0002-ckb.md#42-cell).
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 Querying on cells are the fundamental functions for a DApp to respond to user queries and transaction requests. Lumos provides functions for the queries on cells with specific query options.
 
 The following example is a cell retrieved by Lumos query functions:
@@ -36,8 +40,6 @@ Lumos enriches the cell structure defined in [CKB RFC: Cell](https://github.com/
 }
 ```
 
-<!--The [Indexer.collector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/indexer/lib/index.js#L242) function of the `@ckb-lumos/indexer` package can be used to collect cells by specific query options (<var>lock</var>, <var>type</var>, <var>argsLen</var>, <var>data</var>, <var>fromBlock</var>, <var>toBlock</var>, <var>skip</var>) and return the cells as the result.--><!--The [Indexer.collector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/sql-indexer/lib/index.js#L571) function of the `@ckb-lumos/sql-indexer` package can be used to collect cells by specific query options (<var>lock</var>, <var>type</var>, <var>argsLen</var>, <var>data</var>) and return the cells as the result.--><!--The [CellCollector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/indexer/lib/index.js#L324) class of the `@ckb-lumos/indexer` package supports query on cells with specific query options (<var>lock</var>, <var>type</var>, <var>argsLen</var>, <var>data</var>, <var>fromBlock</var>, <var>toBlock</var>, <var>order</var>, <var>skip</var>) and returns the cells as the result.--><!--The [CellCollector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/sql-indexer/lib/index.js#L622) class of the `@ckb-lumos/sql-indexer` package supports query on cells with specific query options (<var>lock</var>, <var>type</var>, <var>argsLen</var>, <var>data</var>, <var>fromBlock</var>, <var>toBlock</var>, <var>skip</var>, <var>order</var>) and returns the cells as the result.--><!--The CellCollector class of each common script (smart contract), for example, [anyone_can_pay.CellCollector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/common-scripts/src/anyone_can_pay.ts#L37), [dao.CellCollector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/common-scripts/src/dao.ts#L39), [locktime_pool.CellCollector](https://github.com/nervosnetwork/lumos/blob/c3bd18e6baac9c283995f25d226a689970dc9537/packages/common-scripts/src/locktime_pool.ts#L57), also supports the query on cells with specific query options.--><!--For UTXO based blockchains, pending transactions require a certain amount of period before the transactions are accepted by the blockchain. During this period, new cells created by the pending transaction are not available for new transactions.<br/>The `@ckb-lumos/transaction-manager` package deals with this problem. The transaction manager wraps an indexer instance, and makes sure the cells that are created in pending transactions, are also exposed and available for new transactions.-->
-
 ## Query Options
 
 Lumos supports query options on cells, including <var>lock</var>, <var>type</var>, <var>argsLen</var>, <var>data</var>, <var>fromBlock</var>, <var>toBlock</var>, <var>skip</var> and <var>order</var>.
@@ -46,9 +48,7 @@ Lumos supports query options on cells, including <var>lock</var>, <var>type</var
 
 - <var>type</var>: A type script or a ScriptWrapper of a type script.
 
-  <!--The [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html) interface combines <var>argsLen</var> and <var>ioType</var> with a lock or type script to enable fine-grained queries.-->
-
-  For more information about [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html), see [Fine-grained Query for Cells](../guides/querycells#fine-grained-query-for-cells).
+  For more information about [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html), see <Link to={useBaseUrl('/docs/guides/querycells#fine-grained-query-for-cells')}>Fine-grained Query for Cells</Link>.
 
 - <var>argsLen</var>: The lock or type args length. The default value of <var>argsLen</var> is -1 for the query on a full slice of the args.
 
@@ -66,8 +66,8 @@ Lumos supports query options on cells, including <var>lock</var>, <var>type</var
 
 The following prerequisites apply for the examples of this guide:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](http://localhost:3000/lumos_doc/docs/preparation/setupsystem).
-- The Lumos packages are installed. For more information, see [Install Lumos Packages](../guides/installlumos).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- The Lumos packages are installed. For more information, see <Link to={useBaseUrl('/docs/guides/installlumos')}>Install Lumos Packages</Link>.
 
 ## Environment
 
@@ -96,7 +96,7 @@ export const findCellsbyLock = async (lockScript: Script): Promise<Cell[]> => {
 };
 ```
 
-The `INDEXER` of the example is a RockDB backed indexer that is initialized and started in the <var>hellolumos/src/index.ts</var> file. For more information about setting up the Lumos indexer, see [Set Up the RocksDB Backed Indexer](../guides/indexer#set-up-the-rocksdb-backed-indexer).
+The `INDEXER` of the example is a RockDB backed indexer that is initialized and started in the <var>hellolumos/src/index.ts</var> file. For more information about setting up the Lumos indexer, see <Link to={useBaseUrl('/docs/guides/indexer#set-up-the-rocksdb-backed-indexer')}>Set Up the RocksDB Backed Indexer</Link>.
 
 Try the `findCellsbyLock` function in the Node.js REPL mode:
 
@@ -709,4 +709,4 @@ export async function locktimePoolCells(frominfo: string): Promise<Cell[]> {
 }
 ```
 
-For more information, see the [Transfer CKB with Locktime Pool](../guides/buildtransactions#transfer-ckb-with-locktime-pool) example.
+For more information, see the <Link to={useBaseUrl('/docs/guides/buildtransactions#transfer-ckb-with-locktime-pool')}>Transfer CKB with Locktime Pool</Link> example.

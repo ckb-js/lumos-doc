@@ -2,9 +2,11 @@
 id: indexer
 title: Set Up the Lumos Indexer
 ---
-Lumos was designed on the basis of the [Index-Query-Assemble](https://docs.nervos.org/docs/reference/cell#index-query-assemble-pattern) pattern. The Lumos indexer polls blocks from a CKB node, indexes them and stores the indexed data in a local database to provide optimal queries.
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
-<!--Dapps built with Lumos must have an indexer configured and running.-->
+import Link from "@docusaurus/Link";
+
+Lumos was designed on the basis of the [Index-Query-Assemble](https://docs.nervos.org/docs/reference/cell#index-query-assemble-pattern) pattern. The Lumos indexer polls blocks from a CKB node, indexes them and stores the indexed data in a local database to provide optimal queries.
 
 Lumos provides the following two types of indexers:
 
@@ -31,8 +33,6 @@ The usage for the SQL backed indexer is not fully verified. It is still in the e
 </TabItem>
 </Tabs>
 
-<!--Note this issue is actually caused since we are still leveraging the old native node module solution. We are also evaluating other solutions, such as [N-API](https://medium.com/@atulanand94/beginners-guide-to-writing-nodejs-addons-using-c-and-n-api-node-addon-api-9b3b718a9a7f), which is based on a stable API, so there is no need to recompile everything for a different Node.js version. We do hope that in later versions, we can convert to N-API so there is not need to deal with inconsistent module versions.-->
-
 :::info
 
 The Lumos indexer is based on the CKB indexer that is developed by Rust. To leverage the native Rust code without installing Rust, Lumos provides the Lumos indexer with a pre-built native module of the CKB indexer.
@@ -47,7 +47,7 @@ The following prerequisites apply for setting up the Lumos indexer:
 
 - The development environment is set up. 
 
-  For more information, see [Set Up the Development Environment](../preparation/setupsystem).
+  For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
 
 ## Environment
 
@@ -161,11 +161,3 @@ const knex = Knex({
 const sqlindexer = new Indexer("http://127.0.0.1:8114", knex);
 sqlindexer.startForever();
 ```
-
-<!--Electron has a different application binary interface (ABI) from a given Node.js binary, that will cause different Node.js version errors for Electron applications. So the pre-built native module of the CKB indexer needs to be used.-->
-
-<!--First, we do provide pre-built binaries linked with electron's node version.-->
-
-<!--Install npm dependencies in your Electron app to make sure the pre-built native modules compiled for Electron to be downloaded.-->
-
-<!--You can also follow the [steps](https://neon-bindings.com/docs/electron-apps) in Neon's documentation to rebuild the modules.--><!--Note: This workaround requires to install Rust on the system.-->

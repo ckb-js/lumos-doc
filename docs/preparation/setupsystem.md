@@ -2,6 +2,10 @@
 id: setupsystem
 title: Set Up the Development Environment
 ---
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 This guide will help you set up your system for building DApps with Lumos. If you already have everything installed, feel free to read the other guides, and walk through the examples to learn the usage of Lumos.
 
 ## System Requirements
@@ -43,7 +47,7 @@ To install Yarn through NPM:
 npm install --global yarn
 ```
 
-## Install dependencies for node-gyp
+## Install Dependencies for node-gyp
 
 Lumos relies on **node-gyp**, a cross-platform command-line tool for compiling native addon modules for *Node*.js. 
 
@@ -81,13 +85,11 @@ $ sudo apt install build-essential
 </Tabs>
 For more information, see the instructions of <a href="https://github.com/nodejs/node-gyp">node-gyp</a>.
 
-## Install a CKB node on DEV chain by using Tippy
+## Install a CKB Node on DEV Chain by Using Tippy
 
 **Tippy** is a tool to help set up and manage CKB nodes. It can install and start running a CKB node by one simple click. **DEV chain** is the recommended network for the later examples and CKB starters. 
 
-For more information about the concepts of CKB nodes, CKB networks, and the methods to install a CKB node, see [CKB Nodes and Networks](../reference/ckbnode).
-
-import useBaseUrl from "@docusaurus/useBaseUrl";
+For more information about the concepts of CKB nodes, CKB networks, and the methods to install a CKB node, see <Link to={useBaseUrl('/docs/reference/ckbnode')}>CKB Nodes and Networks</Link>.
 
 <Tabs
   defaultValue="ubuntu"
@@ -114,7 +116,7 @@ $ ./Tippy
 
 <p><b>Step 3. Create a CKB node on DEV chain.</b></p>
 
-<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <a href="../reference/ckbnode#ckb-networks">CKB Networks</a>.</p>
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/reference/ckbnode#ckb-networks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tippycreate.png")}/>

@@ -4,19 +4,21 @@ title: Create Accounts
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-In this guide, we will prepare two CKB accounts, Alice and Bob, that will be used in the <var>accounts.ts</var> file in the later [Hello Lumos](../preparation/hellolumos) example. For more information about the concepts of CKB accounts, CKB capacity, and the methods to create accounts, see [CKB Accounts and Capacity](../reference/ckbaccount).
+import Link from "@docusaurus/Link";
+
+In this guide, we will prepare two CKB accounts, Alice and Bob, that will be used in the <var>accounts.ts</var> file in the later <Link to={useBaseUrl('/docs/preparation/hellolumos')}>Hello Lumos</Link> example. For more information about the concepts of CKB accounts, CKB capacity, and the methods to create accounts, see <Link to={useBaseUrl('/docs/reference/ckbaccount')}>CKB Accounts and Capacity</Link>.
 
 ## Prerequisites 
 
 The following prerequisites apply for creating the accounts:
 
-- The CKB node is installed and running on DEV chain. For more information, see [Install a CKB node on DEV Chain by Using Tippy](../preparation/setupsystem#install-a-ckb-node-on-dev-chain-by-using-tippy). 
+- The CKB node is installed and running on DEV chain. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem#install-a-ckb-node-on-dev-chain-by-using-tippy')}>Install a CKB node on DEV Chain by Using Tippy</Link>. 
 
 ## Create the Accounts by Using ckb-cli
 
 ### Step 1. Download the CKB pre-built installer package.
 
-The CKB pre-built installer package includes the ckb-cli tool. For more information, see [Download the CKB Pre-built Installer Package](../reference/ckbnode#step-1-download-the-ckb-pre-built-installer-package).
+The CKB pre-built installer package includes the ckb-cli tool. For more information, see <Link to={useBaseUrl('/docs/reference/ckbnode#step-1-download-the-ckb-pre-built-installer-package')}>Download the CKB Pre-built Installer Package</Link>.
 
 This guide uses the CKB 0.39.0 version. All releases can be found on the <a title="Download" href="https://github.com/nervosnetwork/ckb/releases"><i class="feather icon-download"></i>CKB releases</a> page. If the package is already downloaded, go to step 2 directly.
 
@@ -55,7 +57,7 @@ message: "Success exported account as extended privkey to: \"alice\", please use
 
 ### Step 5. Get CKB capacity for the account of Alice.
 
-For more information about CKB capacity, see [CKB Capacity of an Account](../reference/ckbaccount#ckb-capacity-of-an-account).
+For more information about CKB capacity, see <Link to={useBaseUrl('/docs/reference/ckbaccount#ckb-capacity-of-an-account')}>CKB Capacity of an Account</Link>.
 
 To get CKB capacity for Alice on **DEV chain**, specify Alice as the miner who receives mining rewards.
 
@@ -67,7 +69,7 @@ Assign the lock args of Alice to <b>Block Assembler Lock Arg</b> in the Edit Cha
 
 :::note
 
-CKB is mature 4 [epochs](https://docs.nervos.org/docs/basics/glossary#epoch "An epoch is a period of time for a set of blocks. ") after being mined. In Nervos, an epoch is approximately four hours. For DEV chain, the epoch length is defined by the `genesis_epoch_length` parameter in the **dev.toml** file. For more information about shortening the epoch length for DEV chain, see Step 4 of [Install a CKB node on DEV chain by using Tippy](../preparation/setupsystem#install-a-ckb-node-on-dev-chain-by-using-tippy).
+CKB is mature 4 [epochs](https://docs.nervos.org/docs/basics/glossary#epoch "An epoch is a period of time for a set of blocks. ") after being mined. In Nervos, an epoch is approximately four hours. For DEV chain, the epoch length is defined by the `genesis_epoch_length` parameter in the **dev.toml** file. For more information about shortening the epoch length for DEV chain, see Step 4 of <Link to={useBaseUrl('/docs/preparation/setupsystem#install-a-ckb-node-on-dev-chain-by-using-tippy')}>Install a CKB node on DEV chain by using Tippy</Link>.
 
 :::  
 

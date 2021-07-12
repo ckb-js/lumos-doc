@@ -3,11 +3,9 @@ id: ckbnode
 title: CKB Nodes and Networks
 ---
 
-<!--The Nervos CKB (Common Knowledge Base) is the bottom-most layer in the Nervos ecosystem. It serves as a foundation to build on and provides trust to all layers built on top.-->
-
-<!--CKB nodes can be categorized into three types:--><!--**Full Nodes**: Full nodes verify new blocks and transactions, relay blocks and transactions, and select the chain fork on which they agree. Full nodes are the verifiers of the network. The CKB nodes used for the development and testing are **full nodes**.--><!--**Mining Nodes**: Mining nodes participate in the CKB consensus process. The mining nodes collect new transactions, package them into blocks and produce new blocks when they have found a Proof-of-Work. Mining nodes do not have to store the entire transaction history, only the current cell set.--><!--**Light Nodes**: Light nodes trust full nodes, only subscribe and store a subset of cells that they are concerned with. They use minimal resources. Users increasingly rely on mobile devices and mobile apps to access the Internet, the light node is designed to run on mobile devices.-->
-
 import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
 
 The CKB nodes used in the DApp development are **full nodes** that are the verifiers of the CKB network. A CKB full node verifies new blocks and transactions, relays blocks and transactions, and selects the chain fork on which it agrees.
 
@@ -17,24 +15,24 @@ A CKB node can be set up to connect and interact with one of the following CKB n
 
 - **Mainnet (Lina)**: Mainnet is the main CKB public network. The real-time information of the Lina Mainnet can be checked on the [CKB Explorer](https://explorer.nervos.org/) page.
 
-- **Testnet (Aggron4)**: Testnet is used to test applications integration and smart contracts in real environment with actual data. <!--To get CKB capacity for an account on the Testnet, go to [https://faucet.nervos.org](https://faucet.nervos.org/) and paste the Testnet address of the account in the address input box, then click the **Claim** button. For more information, see [Create Accounts](../preparation/createaccount).-->
+- **Testnet (Aggron4)**: Testnet is used to test applications integration and smart contracts in real environment with actual data. 
 
   :::info
 
   For the first time to run a node on the **Testnet**, syncing data requires upwards of one hour for the current number (**1,300,000+**) of blocks depending on the network connection. The real-time block number on the Testnet can be checked on the [CKB Explorer](https://explorer.nervos.org/aggron) page.<br/>
   :::
 
-- **DEV Chain**:  DEV chain is a local blockchain that provides an efficient and useful development mode for building and testing applications.<!-- To get CKB capacity for an account on the **DEV** chain, specify the account as the miner in the chain configurations for receiving mining rewards. For more information, see [Create Accounts](../preparation/createaccount). This is the recommended network for starters and DApp developers.--> 
+- **DEV Chain**:  DEV chain is a local blockchain that provides an efficient and useful development mode for building and testing applications.
 
 ## Installation Options
 
 There are two options for installing a CKB node:
 
-- [**Install a CKB node by using Tippy**](../reference/ckbnode#install-a-ckb-node-by-using-tippy)
+- **<Link to={useBaseUrl('/docs/reference/ckbnode#install-a-ckb-node-by-using-tippy')}>Install a CKB Node by Using Tippy</Link>**
 
   **Tippy** is a tool that helps set up and manage CKB nodes. It can install and start running a CKB node by one simple click.
 
-- [**Install a CKB node by using the pre-built installer package**](../reference/ckbnode#install-a-ckb-node-by-using-the-pre-built-installer-package)
+- **<Link to={useBaseUrl('/docs/reference/ckbnode#install-a-ckb-node-by-using-the-pre-built-installer-package')}>Install a CKB Node by Using the Pre-built Installer Package</Link>**
 
   The pre-built installer package contains the following tools: 
 
@@ -43,7 +41,7 @@ There are two options for installing a CKB node:
   - **ckb-cli**: ckb-cli is a command line tool that provides the functions of RPC requests, creating CKB addresses, managing wallets, sending transactions, and depositing to Nervos DAO etc.
 ## Install a CKB Node by Using Tippy
 
-Tippy supports to install and manage CKB nodes on all major platforms including Linux, macOS, and Windows. <!--The following installation steps are verified on Ubuntu 20.04 LTS and Windows 10.-->
+Tippy supports to install and manage CKB nodes on all major platforms including Linux, macOS, and Windows.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -73,7 +71,7 @@ $ ./Tippy
 
 <p><b>Step 3. Create a CKB chain.</b></p>
 
-<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <a href="../reference/ckbnode#ckb-networks">CKB Networks</a>.</p>
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/reference/ckbnode#ckb-networks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tippycreate.png")}/>
@@ -133,7 +131,7 @@ value = 1000
 
 <p><b>Step 3. Create a CKB chain.</b></p>
 
-<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <a href="../reference/ckbnode#ckb-networks">CKB Networks</a>.</p>
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/reference/ckbnode#ckb-networks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tippycreate.png")}/>
@@ -186,7 +184,7 @@ value = 1000
 <p>A web page on <a>http://localhost:5000/Home</a> will be opened in a browser after the double click. If the page is not opened, open the browser and type <a>http://localhost:5000/Home</a> in the address field to access the Tippy web UI.</p>
 
 <p><b>Step 3. Create a CKB chain.</b></p>
-<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <a href="../reference/ckbnode#ckb-networks">CKB Networks</a>.</p>
+<p><b>DEV chain</b> is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/reference/ckbnode#ckb-networks')}>CKB Networks</Link>.</p>
 <p>To create a CKB node on <b>DEV chain</b>, click the <b>Launch a CKB devnet instantly</b> button on the home page.</p>
 
 <img src={useBaseUrl("img/tippycreate.png")}/>
@@ -285,7 +283,7 @@ ckb 0.39.0
 
 ### Step 3. Run the CKB node.
 
-**DEV chain** is the recommended network for the later examples and CKB starters. For more information about CKB networks, see [CKB Networks](../reference/ckbnode#ckb-networks).
+**DEV chain** is the recommended network for the later examples and CKB starters. For more information about CKB networks, see <Link to={useBaseUrl('/docs/reference/ckbnode#ckb-networks')}>CKB Networks</Link>.
 
 <Tabs
   defaultValue="dev"

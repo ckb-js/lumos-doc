@@ -4,6 +4,10 @@ title: Query on Transactions
 ---
 > Transactions are the most fundamental entities for a DApp to interact with Nervos CKB. For more information about CKB transactions, see [Nervos Docs: Transaction](https://docs.nervos.org/docs/reference/transaction) and [CKB RFC: Data Structures](https://github.com/nervosnetwork/rfcs/blob/master/rfcs/0019-data-structures/0019-data-structures.md#transaction).
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 Lumos supports querying on transactions for specific query options.
 
 ## Query Options
@@ -14,9 +18,7 @@ Lumos supports to query on transactions for the options including <var>lock</var
 
 - <var>type</var>: A type script or a ScriptWrapper of a type script.
 
-  <!--The [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html) interface combines <var>argsLen</var> and <var>ioType</var> with a lock or type script to enable fine-grained queries.-->
-
-  For more information about [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html), see [Fine-grained Query for Transactions](../guides/querytransactions#fine-grained-query-for-transactions).
+  For more information about [ScriptWrapper](https://nervosnetwork.github.io/lumos/interfaces/base.scriptwrapper.html), see <Link to={useBaseUrl('/docs/guides/querycells#fine-grained-query-for-cells')}>Fine-grained Query for Cells</Link>.
 
 - <var>argsLen</var>: The lock or type args length. The default value of <var>argsLen</var> is -1 for the query on a full slice of the args.
 
@@ -32,8 +34,8 @@ Lumos supports to query on transactions for the options including <var>lock</var
 
 The following prerequisites apply for the examples in this guide:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](http://localhost:3000/lumos_doc/docs/preparation/setupsystem).
-- The Lumos packages are installed. For more information, see [Install Lumos Packages](../guides/installlumos).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- The Lumos packages are installed. For more information, see <Link to={useBaseUrl('/docs/guides/installlumos')}>Install Lumos Packages</Link>.
 
 ## Environment
 

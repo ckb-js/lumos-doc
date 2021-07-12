@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'A TypeScript and JavaScript Framework for CKB DApps',
+  title: 'A CKB DApps Framework for TypeScript and JavaScript',
   tagline: 'The Development Framework for Nervos CKB DApps',
   url: 'https://cryptape.github.io/lumos-doc/',
   baseUrl: '/lumos-doc/',

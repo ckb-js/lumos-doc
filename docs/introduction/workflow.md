@@ -2,6 +2,10 @@
 id: workflow
 title: Workflow
 ---
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 The development of a DApp generally follows the following basic steps:
 
 1. Prepare the basic skills:
@@ -14,21 +18,22 @@ The development of a DApp generally follows the following basic steps:
 
 2. <p>Set up the development environment.
 
-   For more information, see <a href="../preparation/setupsystem">Set Up the Development Environment</a>.</p>
+   For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.</p>
 
 4. <p>Create CKB accounts for the development and testing.
 
-   For more information, see <a href="../preparation/createaccount">Create Accounts</a>.</p>
+   For more information, see <Link to={useBaseUrl('/docs/preparation/createaccount')}>Create Accounts</Link>.</p>
 
 5. <p>Initialize a project and add Lumos packages as dependencies to the project.
 
-   For more information about how to add Lumos packages to a project, see <a href="../guides/installlumos">Install Lumos Packages</a>.</p>
+   For more information about how to add Lumos packages to a project, see <Link to={useBaseUrl('/docs/guides/installlumos')}>Install Lumos Packages</Link>.</p>
 
 5. <p>Establish the connection to the CKB network by setting up the config manager and the Lumos indexer.<br/>
-   For more information about how to set up the config manager, see <a href="../guides/config">Set Up the Config Manger</a>.
-
-   For more information about how to set up the Lumos indexer, see <a href="../guides/indexer">Set Up the Lumos Indexer</a>.</p>
-
+   For more information about how to set up the config manager, see <Link to={useBaseUrl('/docs/guides/config')}>Set Up the Config Manger</Link>.
+   
+   
+   For more information about how to set up the Lumos indexer, see <Link to={useBaseUrl('/docs/guides/indexer')}>Set Up the Lumos Indexer</Link>.</p>
+   
 7. <p>Program the DApp functions by using Lumos to deal with user queries and transaction requests.
 
    For more information about the usage of Lumos, see the sections in the Guides and Examples.</p>

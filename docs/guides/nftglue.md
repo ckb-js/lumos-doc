@@ -2,6 +2,10 @@
 id: integratenft
 title: DApps on CKB Workshop Code
 ---
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 A code example, [DApps on CKB Workshop Code](https://github.com/nervosnetwork/dapps-on-ckb-workshop-code), is provided for the demonstration of integrating the NFT script on CKB. For more information about CKB NFT, see [CKB RFC: CKB-NFT Draft Spec](https://talk.nervos.org/t/rfc-ckb-nft-draft-spec/4779).
 
 The  example has the following structure:
@@ -18,7 +22,7 @@ dapps-on-ckb-workshop-code/
 
 ## Environment
 
-- OS: Ubuntu 20.04.2 <!--with KDE Plasma GUI. For more information about the installation of the KDE plasma GUI, see [How to Install a Desktop (GUI) on An Ubuntu Server](https://phoenixnap.com/kb/how-to-install-a-gui-on-ubuntu).-->
+- OS: Ubuntu 20.04.2 
 - Node.js (v14.0.0)
 - Yarn (1.22.5)
 - GCC and make
@@ -29,8 +33,8 @@ dapps-on-ckb-workshop-code/
 
 The following prerequisites apply for this example:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](../preparation/setupsystem).
-- The account to deploy the NFT script owns enough CKB capacity (33,613.0 CKB). For more information about creating accounts, see [Create Accounts](../preparation/createaccount).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- The account to deploy the NFT script owns enough CKB capacity (33,613.0 CKB). For more information about creating accounts, see <Link to={useBaseUrl('/docs/preparation/createaccount')}>Create Accounts</Link>.
 
 ## Deploy the NFT Script on DEV Chain
 
@@ -97,10 +101,6 @@ ckb-cli installed v0.39.0
 
 </details>
 
-<!--The Capsule tool can be installed from source or the pre-built installer.-->
-
-<!--The following example installs Capsule on Ubuntu by using the [pre-built installer](https://github.com/nervosnetwork/capsule/releases/tag/v0.1.3) of Capsule.-->
-
 ### Step 3. Download the example code.
 
 ```
@@ -154,7 +154,7 @@ The CKB node and the miner must start running before deploying the NFT script. T
 
 To deploy the NFT script:
 
-1. Update the `[lock]` section in the nft-validator/`deployment.toml` file with the `lock_arg`  of the account that is created in the preparation phase. For more information about creating an account, see [Create Accounts](../preparation/createaccount).
+1. Update the `[lock]` section in the nft-validator/`deployment.toml` file with the `lock_arg`  of the account that is created in the preparation phase. For more information about creating an account, see <Link to={useBaseUrl('/docs/preparation/createaccount')}>Create Accounts</Link>.
 
    :::note
 
@@ -320,12 +320,12 @@ $ tsc
 
 The `index.ts` file under the nft-glue project includes the following operations:
 
-- [Generate NFT tokens](../guides/integratenft#generate-nft-tokens).
-- [List all live NFT cells](../guides/integratenft#list-all-live-nft-cells).
-- [Transfer NFT tokens from one user to another user](../guides/integratenft#transfer-nft-tokens-from-one-user-to-another-user).
-- [Sign and seal the transaction](../guides/integratenft#sign-and-seal-the-transaction).
+- <Link to={useBaseUrl('/docs/guides/integratenft#generate-nft-tokens')}>Generate NFT tokens</Link>.
+- <Link to={useBaseUrl('/docs/guides/integratenft#list-all-live-nft-cells')}>List all live NFT cells</Link>.
+- <Link to={useBaseUrl('/docs/guides/integratenft#transfer-nft-tokens-from-one-user-to-another-user')}>Transfer NFT tokens from one user to another user</Link>.
+- <Link to={useBaseUrl('/docs/guides/integratenft#sign-and-seal-the-transaction')}>Sign and seal the transaction</Link>.
 
-Let us check out how the nft-glue project implements these operations by using Lumos. The [execution](../guides/integratenft#run-the-functions-in-the-nodejs-repl-mode) of these operations can be found at the end of this guide.
+Let us check out how the nft-glue project implements these operations by using Lumos. The <Link to={useBaseUrl('/docs/guides/integratenft#run-the-functions-in-the-nodejs-repl-mode')}>execution</Link> of these operations can be found at the end of this guide.
 
 #### **Generate NFT tokens**
 

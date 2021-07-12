@@ -2,11 +2,13 @@
 id: manageaccounts
 title: Manage Accounts
 ---
-Lumos also provides the functions to manage the keys, addresses and the lock script of a [CKB Account](../preparation/createaccount#ckb-account).
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
+Lumos also provides the functions to manage the keys, addresses and the lock script of a <Link to={useBaseUrl('/docs/preparation/createaccount#ckb-account')}>CKB Account</Link>.
 
 The following figure shows the Lumos functions for the conversion between private key, public key, Lock Script, and CKB address.
-
-import useBaseUrl from "@docusaurus/useBaseUrl";
 
 <img src={useBaseUrl("img/conversion.png")}/>
 
@@ -14,8 +16,8 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 The following prerequisites apply for the examples in this guide:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](../preparation/setupsystem).
-- The Lumos packages are installed. For more information, see [Install Lumos Packages](../guides/installlumos).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- The Lumos packages are installed. For more information, see <Link to={useBaseUrl('/docs/guides/installlumos')}>Install Lumos Packages</Link>.
 
 ## Environment
 

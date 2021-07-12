@@ -2,11 +2,15 @@
 id: hellolumos
 title: Hello Lumos
 ---
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+import Link from "@docusaurus/Link";
+
 The Hello Lumos example is designed as a simple "DApp" that implemented the most basic functions, such as the query functions, the common transfer function, the DAO operations, etc., based on Lumos functionalities.
 
 You can follow the steps in this guide to perform a common transfer with the functions provided by the Hello Lumos "DApp".
 
-The later sections of the guide, for example, [Query on Cells](../guides/querycells), [Query on Transactions](../guides/querytransactions), and [Assemble Transactions](../guides/buildtransactions), explain the usage of Lumos by using the code examples of Hello Lumos. The full code of the example can be found [here](https://github.com/xying21/hellolumos). 
+The later sections of the guide, for example, <Link to={useBaseUrl('/docs/guides/querycells')}>Query on Cells</Link>, <Link to={useBaseUrl('/docs/guides/querytransactions')}>Query on Transactions</Link>, and <Link to={useBaseUrl('/docs/guides/buildtransactions')}>Assemble Transactions</Link>, explain the usage of Lumos by using the code examples of Hello Lumos. The full code of the example can be found [here](https://github.com/xying21/hellolumos). 
 
 The  example has the following structure:
 
@@ -32,38 +36,14 @@ hellolumos/
 
 The following prerequisites apply for walking through the Hello Lumos example:
 
-- The development environment is set up. For more information, see [Set Up the Development Environment](../preparation/setupsystem).
-- Two accounts, Alice and Bob, have been created. Alice is specified as the miner to receive mining rewards. For more information, see [Create accounts](../preparation/createaccount).
+- The development environment is set up. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
+- Two accounts, Alice and Bob, have been created. Alice is specified as the miner to receive mining rewards. For more information, see <Link to={useBaseUrl('/docs/preparation/createaccount')}>Create Accounts</Link>.
 
 ## Environment
 
 The following examples are verified on Ubuntu 20.04.2. Steps on the other platforms are similar and can be adjusted accordingly.
 
 ## Steps
-
-<!--Set up the development Environment.-->
-
-<!--Step 1. Install Node.js.-->
-
-<!--Step 2. Install Yarn.-->
-
-<!--Step 3. Install Dependencies for node-gyp.-->
-
-<!--For more information about the setup and the steps on the other platforms, see [Set Up the Development Environment](../preparation/setupsystem).-->
-
-<!--Install and run a CKB Node on DEV chain.-->
-
-<!--Step 1. Download the CKB Pre-built Installer Package.-->
-
-<!--Step 2. Initialize the CKB node on the DEV blockchain.-->
-
-<!--Step 3. Modify `genesis_epoch_length` and `permanent_difficulty_in_dummy` in the /ckb_v0.39.0_x86_64-unknown-linux-gnu/specs/**dev.toml** file.-->
-
-<!--Step 4. Modify the `value` parameter under the `miner.workers` section in the **ckb-miner.toml** file.-->
-
-<!--Step 5. Start the CKB node with the dev chain.$ ckb run -C devnet-->
-
-<!--For more information, see [Install a CKB Node by Using the Pre-built Installer Package-->
 
 ### Download the Hello Lumos example.
 
@@ -74,11 +54,11 @@ $ git clone https://github.com/nervosnetwork/hellolumos
 
 ### Install dependencies.
 
-All required dependencies for the Hello Lumos example are listed in package.json. The dependencies can be installed by running the `yarn install` command. <!--For information about installing a specific Lumos package, see [Install Lumos](../tutorials/installlumos).-->
+All required dependencies for the Hello Lumos example are listed in package.json. The dependencies can be installed by running the `yarn install` command. 
 
 :::note
 
-The development environment must be set up correctly for successful installation of the dependencies. For more information, see [Set Up the Development Environment](../preparation/setupsystem).
+The development environment must be set up correctly for successful installation of the dependencies. For more information, see <Link to={useBaseUrl('/docs/preparation/setupsystem')}>Set Up the Development Environment</Link>.
 
 :::
 
@@ -108,7 +88,7 @@ Done in 52.70s.
 
 Replace the value of `PRIVATE_KEY`, `ADDRESS` and `ARGS` for ALICE and BOB in the `accounts.ts` file with the account information you have prepared when creating accounts.
 
-You can retrieve the `ADDRESS` and `ARGS` for ALICE and BOB by executing the `ckb-cli account list` command. The private keys are stored in the <var>alice</var> file and the <var>bob</var> file during the creation of the accounts. For more information about creating accounts, see [Create Accounts](../preparation/createaccount).
+You can retrieve the `ADDRESS` and `ARGS` for ALICE and BOB by executing the `ckb-cli account list` command. The private keys are stored in the <var>alice</var> file and the <var>bob</var> file during the creation of the accounts. For more information about creating accounts, see <Link to={useBaseUrl('/docs/preparation/createaccount')}>Create Accounts</Link>.
 
 :::note
 
@@ -157,7 +137,7 @@ The server is started.
 
 ### Perform a common transfer transaction.
 
-The Hello Lumos example implements the common transfer transaction function by using Lumos modules and functions. For more information about building a common transaction by using Lumos, see [Transfer CKB in a Common Transaction](../guides/buildtransactions#transfer-ckb-in-a-common-transaction).
+The Hello Lumos example implements the common transfer transaction function by using Lumos modules and functions. For more information about building a common transaction by using Lumos, see <Link to={useBaseUrl('/docs/guides/buildtransactions#transfer-ckb-in-a-common-transaction')}>Transfer CKB in a Common Transaction</Link>.
 
 1. Get the account information of Alice and Bob.
 
@@ -195,7 +175,7 @@ The Hello Lumos example implements the common transfer transaction function by u
 
    :::
 
-   For more information about getting transaction information by using Lumos, see [Get Transaction Status and Block Hash](../guides/querytransactions#get-transaction-status-and-block-hash). 
+   For more information about getting transaction information by using Lumos, see <Link to={useBaseUrl('/docs/guides/querytransactions#get-transaction-status-and-block-hash')}>Get Transaction Status and Block Hash</Link>. 
 
    ```javascript {1}
    > await querytransactions.getTXbyHash("0x22cc789bdaa8e021caa303cf20cfa4063b46a17abd62b31aa2cf712844f984cb");
@@ -207,7 +187,7 @@ The Hello Lumos example implements the common transfer transaction function by u
 
    When the transaction is committed, the new balance appears in the result.
 
-   For more information about getting balance by a lock script, see [Get the Balance of an Account](../guides/querycapacity#get-the-balance-of-an-account).
+   For more information about getting balance by a lock script, see <Link to={useBaseUrl('/docs/guides/querycapacity#get-the-balance-of-an-account')}>Get the Balance of an Account</Link>.
 
    ```javascript {1}
    > await querycells.getBalancebyLock(script2);

@@ -4,6 +4,8 @@ title: CKB Accounts and Capacity
 ---
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
+import Link from "@docusaurus/Link";
+
 This guide introduces the concepts of CKB account, CKB capacity of an account, and how to create CKB accounts before the DApp development.
 
 The accounts can be created by using ckb-cli. DEV chain also provides two accounts from the genesis cells that were issued with a considerable amount of capacity. 
@@ -44,8 +46,6 @@ Lumos enriches the cell structure defined in [CKB RFC: Cell](https://github.com/
   data: '0x'
 }
 ```
-
-<!--These live cells are locked by a [lock script](https://docs.nervos.org/docs/reference/script#lock-script) of the account.-->
 
 ## CKB Capacity of an Account
 
@@ -135,7 +135,7 @@ If an account seeks to perform transactional actions, such as transferring CKB t
 
 For example, the minimum CKB capacity requirement for a regular transaction is 61 [CKB](https://docs.nervos.org/docs/basics/glossary#shannon "One CKByte is equal to 100,000,000 Shannons.") (6,100,000,000 shannons), and the minimum CKB capacity requirement for a DAO deposit transaction is 102 CKB (10,200,000,000 shannons).
 
-Accounts on Testnet can request CKB capacity on [https://faucet.nervos.org](https://faucet.nervos.org/). Accounts on DEV chain can obtain CKB capacity by mining blocks as miners. For more information about getting CKB capacity, see **[step 5](../preparation/createaccount#step-5-get-ckb-capacity-for-the-account-of-alice)** of [Create the accounts by Using ckb-cli](../reference/ckbaccount#create-the-accounts-by-using-ckb-cli).
+Accounts on Testnet can request CKB capacity on [https://faucet.nervos.org](https://faucet.nervos.org/). Accounts on DEV chain can obtain CKB capacity by mining blocks as miners. For more information about getting CKB capacity, see **<Link to={useBaseUrl('/docs/preparation/createaccount#step-5-get-ckb-capacity-for-the-account-of-alice')}>step 5</Link>** of <Link to={useBaseUrl('/docs/reference/ckbaccount#create-the-accounts-by-using-ckb-cli')}>Create the accounts by Using ckb-cli</Link>.
 
 :::
 
@@ -178,8 +178,6 @@ The following figure shows the relationship between private key, public key, loc
 
 <img src={useBaseUrl("img/ownership.png")}/>
 
-<!--Create an account by using ckb-cli.--> <!--Get the private key of an account.--><!--Get CKB capacity for an account.--><!--Check the capacity of an account.-->
-
 ## Prerequisites 
 
 The following prerequisites apply for creating the accounts:
@@ -194,7 +192,7 @@ The following prerequisites apply for creating the accounts:
 
 This guide uses the CKB 0.39.0 version. All releases can be found on the <a title="Download" href="https://github.com/nervosnetwork/ckb/releases"><i class="feather icon-download"></i>CKB releases</a> page. If the package is already downloaded, go to step 2 directly.
 
-For more information, see [Download the CKB Pre-built Installer Package](../reference/ckbnode#step-1-download-the-ckb-pre-built-installer-package).
+For more information, see <Link to={useBaseUrl('/docs/reference/ckbnode#step-1-download-the-ckb-pre-built-installer-package')}>Download the CKB Pre-built Installer Package</Link>.
 
 ### Step 2. Verify the ckb-cli tool is working and check the version.
 
@@ -237,7 +235,7 @@ The process of getting CKB capacity varies for the accounts on different network
 
   :::note
 
-  The CKB is mature 4 [epochs](https://docs.nervos.org/docs/basics/glossary#epoch "An epoch is a period of time for a set of blocks. ") after it is mined. In Nervos, an epoch is approximately four hours. For DEV chain, the epoch length is defined by the `genesis_epoch_length` parameter in the **dev.toml** file. For more information about shortening the epoch length for DEV chain, see Step 4 of [Install a CKB node on DEV chain by using Tippy](../preparation/setupsystem#install-a-ckb-node-on-dev-chain-by-using-tippy).
+  The CKB is mature 4 [epochs](https://docs.nervos.org/docs/basics/glossary#epoch "An epoch is a period of time for a set of blocks. ") after it is mined. In Nervos, an epoch is approximately four hours. For DEV chain, the epoch length is defined by the `genesis_epoch_length` parameter in the **dev.toml** file. For more information about shortening the epoch length for DEV chain, see Step 4 of <Link to={useBaseUrl('/docs/preparation/setupsystem#install-a-ckb-node-on-dev-chain-by-using-tippy')}>Install a CKB node on DEV chain by using Tippy</Link>.
 
   :::  
 
