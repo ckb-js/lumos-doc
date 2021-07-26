@@ -47,9 +47,9 @@ The following examples are verified on Ubuntu 20.04.2. Steps on the other platfo
 
 ### Download the Hello Lumos example.
 
-```
+```shell
 $ cd
-$ git clone https://github.com/nervosnetwork/hellolumos
+$ git clone https://github.com/xying21/hellolumos
 ```
 
 ### Install dependencies.
